@@ -1,0 +1,5 @@
+.body {
+    background-color: #131417;
+    margin-top: 3rem;
+    height: calc( 100% - 3rem);
+}
