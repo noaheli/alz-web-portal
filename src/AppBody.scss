@@ -1,0 +1,195 @@
+.body {
+    background-color: #131417;
+    margin-top: 3rem;
+    margin-left: 2.5rem;
+    height: calc(100% - 3rem);
+    position: aboslute;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ToDoContainer {
+    
+    overflow:hidden;
+    position:relative;
+    margin: 1rem;
+    margin-left: 1.5rem;
+    max-width: 400px;
+    width: calc(100% - 4rem);
+    border-radius: 10px;
+    background-color: #112448;
+    transition: .15s ease-in-out;
+    min-height: 50%;
+}
+
+.ToDoTableHead {
+    background-color: #264E9D;
+    color: white;
+    border-radius: 5px 5px 0px 0px;
+    width: 97%;
+    padding: 8px 0;
+    padding-left: 14px;
+}
+
+.ToDoTableHead h3 {
+    margin: 0;
+    padding-top:5px;
+}
+
+.table {
+    position:absolute;
+    background-color: transparent;
+    color: black;
+    width: 93%;
+    border-radius: 5px;
+    padding: 16px;
+    z-index: 0;
+    .expanded {
+        transition: .3s ease-in-out;
+        height: 66px !important;
+    }
+    .container {
+        //transition: .3s ease-in-out;
+        border-radius: 10px;
+        overflow:hidden;
+        position: relative;
+        height: 33px;
+        margin-bottom: 15px;
+        
+    }
+    .row {
+        z-index: 1;
+        color: #5e5e5e;
+        font-weight:10;
+        border-radius: 10px;
+        justify-content: space-between;
+        background-color: white;
+        position: relative;
+        display: flex;
+        vertical-align:middle;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.111);
+        .boxes {
+            min-width: 60px;
+            max-width: 60px;
+            display: inline-flex;
+            position:absolute;
+            top:10.5%;
+            right: 20px;
+            justify-content:space-between;
+            .clickable {
+                cursor: pointer;
+            }
+            .squareIcon {
+                position: relative;
+                width: 26px;
+                height: 26px;
+                content: '';
+                border-radius: 6px;
+            }
+            .check {
+                background-color: #13C145;
+                transition: .3s ease-in-out;
+            }
+            .check:hover {
+                background-color: #14aa3e;
+                transition: .3s ease-in-out;
+            }
+            .ex {
+                background-color: #BD515D;
+                transition: .3s ease-in-out;
+            }
+            .ex:hover {
+                background-color: #9d3844;
+                transition: .3s ease-in-out;
+            }
+        }
+        
+        .activity {
+            padding: 7px 0px 7px 10px;
+            text-overflow: ellipsis;
+            
+        }
+    }
+    .additional-row {
+        z-index: 0;
+        color: #5e5e5e;
+        font-weight:10;
+        position: absolute;
+        top:0;
+        width: 100%;
+        background-color: #F1F2F8;
+        border-radius: 10px;
+        z-index: 0;
+        height:66px;
+        .additional-content {
+            padding: 0px 0px 0px 30px;
+            position: absolute;
+            bottom: 8px;
+            justify-content: space-between;
+            .boxes {
+                min-width: 90px;
+                display: inline-flex;
+                position:absolute;
+                bottom: -4px;
+                right: -193px;
+                justify-content:space-between;
+                .text-input {
+                    width: 50px;
+                    border-radius: 10px;
+                    border: 0px;
+                    text-align: center;
+                }
+                .clickable {
+                    cursor: pointer;
+                }
+                .squareIcon {
+                    position: relative;
+                    width: 26px;
+                    height: 26px;
+                    content: '';
+                    border-radius: 6px;
+                }
+                .send {
+                    background-color: #3A78F2;
+                    transition: .3s ease-in-out;
+                }
+                .send:hover {
+                    background-color: #5087f7;
+                    transition: .3s ease-in-out;
+                }
+            }
+        }
+    }
+    .eject {
+        transform: translateX(130%);
+        transition: .15s ease-in;
+    }
+    .move-up {
+        transform: translateY(calc(-100% - 15px));
+        transition: .3s ease-in-out;
+    }
+}
+
+.grey {
+    background-color: #fafafa;
+}
+
+.white {
+    background-color: white;
+}
+
+.empty {
+    color: white;
+    text-align: center;
+    position:relative;
+}
+
+.fade-out {
+    opacity: 0%;
+}
+
+.fade-in {
+    opacity: 100%;
+    transition: .3s ease-in-out;
+}

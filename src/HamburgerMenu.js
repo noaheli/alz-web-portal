@@ -3,7 +3,7 @@ import React from 'react';
 export default class HamburgerMenu extends React.Component {
     render() {
       return (
-      <div class="burger">
+      <div className="burger">
         a
       </div>);
     }
